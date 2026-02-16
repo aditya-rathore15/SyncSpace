@@ -1,5 +1,32 @@
-function LoginPage() {
-	return <div>
-		This is the Login Page in setup branch</div>;
-}
+import AuthCard from "../components/AuthCard";
+import LoginForm from "../components/LoginForm";
+
+const LoginPage = () => {
+	return (
+		<div className="min-h-screen bg-background flex flex-col items-center justify-center px-4">
+
+			<div className="mb-8 text-center">
+				<h1 className="text-3xl font-semibold text-text-primary">
+					SyncSpace
+				</h1>
+				<p className="text-sm text-text-secondary mt-1">
+					Collaborate. Organize. Deliver.
+				</p>
+			</div>
+
+			<AuthCard>
+				<LoginForm />
+			</AuthCard>
+
+			<p className="mt-6 text-sm text-text-secondary">
+				Don’t have an account?{" "}
+				<span className="text-primary hover:underline cursor-pointer">
+					Sign up
+				</span>
+			</p>
+
+		</div>
+	);
+};
+
 export default LoginPage;
